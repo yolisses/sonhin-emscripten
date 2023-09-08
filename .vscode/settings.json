@@ -1,3 +1,7 @@
 {
-  "cSpell.words": ["emscripten"]
+  "cSpell.words": ["emscripten"],
+  "files.associations": {
+    "*.html": "html",
+    "iostream": "cpp"
+  }
 }
