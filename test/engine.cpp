@@ -9,20 +9,21 @@ const int SAMPLE_RATE = 44100;
 class Engine
 {
 public:
+    Engine(){};
     int index;
     float chunk[CHUNK_SIZE];
 };
-
-EMSCRIPTEN_BINDINGS(engine_something)
-{
-    class_<Engine>("MyClass")
-        .constructor<>();
-}
 
 int main()
 {
     Engine engine;
     printf("here\n");
-    printf("%d\n", engine.index);
     return 0;
+}
+
+EMSCRIPTEN_BINDINGS(engine)
+{
+    class_<Engine>("Engine")
+        .constructor()
+        .property("index", &Engine::index);
 }

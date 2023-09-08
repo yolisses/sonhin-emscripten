@@ -1,3 +1,4 @@
 *.js
 *.wasm
 *.html
+!test/experiment.html
